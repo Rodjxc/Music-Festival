@@ -1,3 +1,19 @@
+/* If we want to IMPORT new custom CSS rules (like a new font that doesnt existe in
+tailwind, we'll do this here. Base is the more generic, components a bit more specific
+and utilities the most specific and overrides both*/
+@import url('https://fonts.googleapis.com/css2?family=Quicksand:wght@300;400;500;600;700&display=swap');
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+
+@layer base {
+  html {
+    font-family: 'Quicksand', sans-serif;
+  }
+}
+
+/*We can also create "custom classes" called components (in a similar way
+to React, where you get a couple of different tailwind classes, group them
+all under one name, and use that name as a tailwind class. This should only
+be done in case you DONT use a framework like React, because in that case
+you should apply all the classes to the React component*/

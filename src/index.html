@@ -1,11 +1,55 @@
 <!DOCTYPE html>
 <html>
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <link href="../dist/output.css" rel="stylesheet" />
-    <script defer src="./assets/fontawesome/js/solid.min.js"></script>
-    <script defer src="./assets/fontawesome/js/fontawesome.min.js"></script>
-  </head>
-  <body></body>
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <link href="/dist/output.css" rel="stylesheet" />
+  <script defer src="./assets/fontawesome/js/solid.min.js"></script>
+  <script defer src="./assets/fontawesome/js/fontawesome.min.js"></script>
+</head>
+
+<body>
+  <main>
+    <header class="text-zinc-50">
+      <nav class="sticky top-0 flex bg-gradient-to-r from-rose-700 to-pink-800">
+        <div class="flex items-center gap-2 p-2"><img src="/src/assets/images/logo-inverted.png" alt="main-logo"
+            width="50">
+          <div class="text-2xl font-bold">tw: <span class="text-gray-900">Music Festival</span></div>
+        </div>
+        <div class="flex-1 flex items-center justify-end">
+          <div
+            class="relative flex h-full items-center p-2 cursor-pointer font-bold text-pink-200 hover:text-zinc-200 hover:bg-white/10 transition-colors ease-in-out">
+            <span>Home</span>
+          </div>
+          <div
+            class="relative flex h-full items-center p-2 cursor-pointer font-bold text-pink-200 hover:text-zinc-200 hover:bg-white/10 transition-colors ease-in-out">
+            <span>Lineup</span>
+          </div>
+          <div
+            class="relative flex h-full items-center p-2 cursor-pointer font-bold text-pink-200 hover:text-zinc-200 hover:bg-white/10 transition-colors ease-in-out group">
+            <span>Tickets</span>
+            <div class="hidden group-hover:block bg-pink-500 absolute top-full right-0 whitespace-nowrap rounded-b-md text-right">
+              <div
+                class="block p-4 font-bold hover:bg-white/5  transition-colors ease-in-out cursor-pointer text-pink-200">
+                <span>Single Day Ticket</span></div>
+              <div
+                class="block p-4 font-bold hover:bg-white/5 transition-colors ease-in-out cursor-pointer text-pink-200">
+                <span>2 Day Ticket</span></div>
+              <div
+                class="block p-4 font-bold hover:bg-white/5 transition-colors ease-in-out cursor-pointer text-pink-200">
+                <span>Full Pass</span></div>
+
+            </div>
+          </div>
+          <div
+            class="relative flex h-full items-center p-2 cursor-pointer font-bold text-pink-200 hover:text-zinc-200 hover:bg-white/10 transition-colors ease-in-out">
+            <span>Support</span>
+          </div>
+        </div>
+      </nav>
+    </header>
+  </main>
+</body>
+
 </html>
