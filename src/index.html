@@ -1,11 +1,96 @@
 <!DOCTYPE html>
 <html>
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <link href="../dist/output.css" rel="stylesheet" />
-    <script defer src="./assets/fontawesome/js/solid.min.js"></script>
-    <script defer src="./assets/fontawesome/js/fontawesome.min.js"></script>
-  </head>
-  <body></body>
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <link href="/dist/output.css" rel="stylesheet" />
+  <script defer src="./assets/fontawesome/js/solid.min.js"></script>
+  <script defer src="./assets/fontawesome/js/fontawesome.min.js"></script>
+  <script>
+    window.onload = () => {
+      const mobileMenuIcon = document.getElementById("mobile-menu-button");
+      mobileMenuIcon.addEventListener("click", () => {
+        if (mobileMenuIcon.classList.contains("open")) {
+          mobileMenuIcon.classList.remove("open");
+        } else {
+          mobileMenuIcon.classList.add("open");
+        }
+      });
+    };
+  </script>
+  
+</head>
+
+<body>
+  <main>
+    <header class="text-zinc-200">
+      <!--The header will target everything on the top of the page-->
+      <nav class="sticky flex top-0 bg-gradient-to-r from-rose-700 to-pink-500">
+        <div class="flex items-center p-2 gap-2">
+          <img src="/src/assets/images/logo-inverted.png" width="45" alt="logo">
+          <div class="text-2xl font-bold">Tw: <span class="text-sky-900"> Music Festival</span></div>
+        </div>
+        <!--The above div will take the logo and the logo text-->
+        <div class="block md:hidden ml-auto pr-4 my-auto cursor-pointer">
+          <div id="mobile-menu-button" class="group">
+            <!--to make an animation with the 3 lines to an X, we add an id that will trigger
+            a class when you click. The top line will rotate 45d, the middle one will disspaear
+          and the bottom one will rotate the oposite direction 45d-->
+            <div class="top-0 bg-zinc-200 rounded-full w-8 h-1 group-open:rotate-45 transition-all group-open:top-2 relative"></div>
+            <!-- for the effect of the X we'll need a listener that will trigger it. Also, we're 
+            grouping the inside of the hamburguer menu into a group, and that group will have a 
+          VARIANT (the -open status) that we'll define with a plugin-->
+            <div class="bg-zinc-200 rounded-full w-8 h-1 mt-1 group-open:opacity-0 opacity-100 transition-all"></div>
+            <div class="top-0 bg-zinc-200 rounded-full w-8 h-1 mt-1 group-open:-rotate-45 transition-all group-open:-top-2 relative"></div>
+          </div>
+          <div class="absolute bg-gradient-to-r from-rose-700 to-pink-500 w-full left-0 top-[58px]">mobile menu </div>
+        </div>
+        <!-- Above is the mobile navigation. It will do the opposite as the above md sreens,
+        it'll be block (so visible) but on screens medium and above, it'll hide
+      The hamburguer menu is basically 3 empty divs with a white background with a bit of margin
+    top on two of them-->
+
+        <div class="hidden flex-1 md:flex items-center justify-end">
+          <!-- For the hamburguer menu, we put it in hidden by default. md:flex means that
+          on medium and above screens (so tablets and above) it will do a flex, so it will 
+        appear. If the scree is less than md, it'll hide-->
+          <div class="menu-item">
+            <span>Home</span>
+          </div>
+          <div class="menu-item">
+            <span>Lineup</span>
+          </div>
+          <div class="menu-item group">
+            <span>Tickets</span>
+            <div
+              class="group-hover:block hidden absolute top-full whitespace-nowrap right-0 bg-pink-500 rounded-b-md text-right">
+              <div
+                class="p-4 font-bold hover:bg-white/5 hover:text-zinc-200 transition-colors ease-in-out cursor-pointer text-pink-200">
+                <span>Single Day Ticket</span>
+              </div>
+              <div
+                class="p-4 font-bold hover:bg-white/5 hover:text-zinc-200 transition-colors ease-in-out cursor-pointer text-pink-200">
+                <span>Two Day Ticket</span>
+              </div>
+              <div
+                class="p-4 font-bold hover:bg-white/5 hover:text-zinc-200 transition-colors ease-in-out cursor-pointer text-pink-200">
+                <span>Full Pass Ticket</span>
+              </div>
+            </div>
+          </div>
+          <div class="menu-item">
+            <span>Support</span>
+          </div>
+
+
+        </div>
+        <!-- The above div will take the rest of the navbar. For it to take the
+        whole space between the end and the logo, we select flex-1. The class menu-item 
+      is a component class created by us-->
+      </nav>
+    </header>
+  </main>
+</body>
+
 </html>

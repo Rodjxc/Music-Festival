@@ -1,3 +1,23 @@
+@import url('https://fonts.googleapis.com/css2?family=Quicksand:wght@300;400;500;600;700&display=swap');
+
+/*to import a custom font, we find it on google fonts, we import it (without the
+<style> tags, and we paste it here. Then we add it as a layer (because it's a class
+for the whole page, not too specific, that will apply to the html*/
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+
+@layer base {
+    html {font-family: "Quicksand", sans-serif;}
+}
+
+/*In the base layer we should only target html*/
+
+@layer components {
+    .menu-item {
+        @apply relative flex h-full items-center p-4 cursor-pointer font-bold text-pink-200 hover:text-white hover:bg-white/10 transition-colors ease-in-out;}
+}
+/*This components should only be used in the event of NOT using a framework
+that works with components itself like React or Vue. If we are using
+one of them, we'd apply all the styles once to that component, but if not
+we can create one with our personal name "menu-item" and then @apply and  */
