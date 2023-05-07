@@ -10,12 +10,24 @@
   <script>
     window.onload = () => {
       const mobileMenuIcon = document.getElementById("mobile-menu-button");
+      const mobileMenu = document.querySelector(".peer-open");
       mobileMenuIcon.addEventListener("click", () => {
         if (mobileMenuIcon.classList.contains("open")) {
           mobileMenuIcon.classList.remove("open");
+          mobileMenu.classList.add("hidden");
         } else {
           mobileMenuIcon.classList.add("open");
+          mobileMenu.classList.remove("hidden");
+          mobileMenu.classList.add("block");
         }
+        const ticketsMenuItem = document.getElementById("tickets-menu-item");
+        ticketsMenuItem.addEventListener("click", () => {
+          if (ticketsMenuItem.classList.contains("open")) {
+            ticketsMenuItem.classList.remove("open");
+          } else {
+            ticketsMenuItem.classList.add("open");
+          }
+        })
       });
     };
   </script>
@@ -33,7 +45,12 @@
         </div>
         <!--The above div will take the logo and the logo text-->
         <div class="block md:hidden ml-auto pr-4 my-auto cursor-pointer">
-          <div id="mobile-menu-button" class="group">
+
+
+          <!-- #####  HAMBURGUER MENU ICON  ####-->
+
+
+          <div id="mobile-menu-button" class="group peer">
             <!--to make an animation with the 3 lines to an X, we add an id that will trigger
             a class when you click. The top line will rotate 45d, the middle one will disspaear
           and the bottom one will rotate the oposite direction 45d-->
@@ -48,12 +65,51 @@
               class="top-0 bg-zinc-200 rounded-full w-8 h-1 mt-1 group-open:-rotate-45 transition-all group-open:-top-2 relative">
             </div>
           </div>
-          <div class="absolute bg-gradient-to-r from-rose-700 to-pink-500 w-full left-0 top-[58px]">mobile menu </div>
+
+          <!-- #########  INSIDE THE HAMBURGER MENU  #######-->
+
+          <div class="absolute bg-gradient-to-r from-rose-700 to-pink-500 peer-open hidden w-full left-0 top-14">
+            <div
+              class="p-4 font-bold hover:bg-white/5 hover:text-zinc-200 transition-colors ease-in-out cursor-pointer text-pink-200 items-center justify-center">
+              <span>Home</span>
+            </div>
+            <div
+              class="p-4 font-bold hover:bg-white/5 hover:text-zinc-200 transition-colors ease-in-out cursor-pointer text-pink-200 items-center justify-center">
+              <span>Lineup</span>
+            </div>
+            <div id="tickets-menu-item"
+              class="group font-bold hover:bg-white/5 hover:text-zinc-200 transition-colors ease-in-out cursor-pointer text-pink-200 items-center justify-center">
+              <div class="p-4 text-center font-bold">Tickets</div>
+              <div class="group-hover:block hidden">
+                <div
+                  class="text-center p-4 relative text-pink-200 hover:text-zinc-200 hover:bg-white/2 transition-colors ease-in-out">
+                  <span>Single Day Ticket</span>
+                </div>
+                <div
+                  class="text-center p-4 relative text-pink-200 hover:text-zinc-200 hover:bg-white/2 transition-colors ease-in-out">
+                  <span>Two Day Ticket</span>
+                </div>
+                <div
+                  class="text-center p-4 relative text-pink-200 hover:text-zinc-200 hover:bg-white/2 transition-colors ease-in-out">
+                  <span>Full Pass</span>
+                </div>
+              </div>
+            </div>
+            <div
+              class="p-4 font-bold hover:bg-white/5 hover:text-zinc-200 transition-colors ease-in-out cursor-pointer text-pink-200 items-center justify-center">
+              <span>Support</span>
+            </div>
+          </div>
+
         </div>
         <!-- Above is the mobile navigation. It will do the opposite as the above md sreens,
         it'll be block (so visible) but on screens medium and above, it'll hide
       The hamburguer menu is basically 3 empty divs with a white background with a bit of margin
     top on two of them-->
+
+
+        <!-- ##### WIDE SCREEN NAVBAR #####-->
+
 
         <div class="hidden flex-1 md:flex items-center justify-end">
           <!-- For the hamburguer menu, we put it in hidden by default. md:flex means that
@@ -93,6 +149,12 @@
         whole space between the end and the logo, we select flex-1. The class menu-item 
       is a component class created by us-->
       </nav>
+
+      <!-- ###############  HERO SECTION    ################ -->
+
+      <div style="background-image: url('./assets/images/hero.jpg');"
+        class="flex flex-col items-center justify-center h-[calc(100vh_-_200px)] min-h-[400px] bg-[url('./assets/images/hero.jpg')]">
+      </div>
     </header>
   </main>
 </body>

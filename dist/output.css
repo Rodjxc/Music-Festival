@@ -978,3 +978,11 @@ we can create one with our personal name "menu-item" and then @apply and  */
     display: none;
   }
 }
+
+.open {
+  display: block;
+}
+
+.hidden {
+  display: none;
+}
