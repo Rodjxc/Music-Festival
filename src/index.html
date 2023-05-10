@@ -4,7 +4,7 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <link href="/dist/output.css" rel="stylesheet" />
+  <link href="/Music-Festival/dist/output.css" rel="stylesheet" />
   <script defer src="./assets/fontawesome/js/solid.min.js"></script>
   <script defer src="./assets/fontawesome/js/fontawesome.min.js"></script>
   <script>
@@ -40,7 +40,7 @@
       <!--The header will target everything on the top of the page-->
       <nav class="sticky flex top-0 bg-gradient-to-r from-rose-700 to-pink-500">
         <div class="flex items-center p-2 gap-2">
-          <img src="/src/assets/images/logo-inverted.png" width="45" alt="logo">
+          <img src="./assets/images/logo-inverted.png" width="45" alt="logo">
           <div class="text-2xl font-bold">Tw: <span class="text-sky-900"> Music Festival</span></div>
         </div>
         <!--The above div will take the logo and the logo text-->
@@ -152,8 +152,11 @@
 
       <!-- ###############  HERO SECTION    ################ -->
 
-      <div class="flex flex-col items-center justify-center h-[calc(100vh-200px)]">
-
+      <div style="background-image: url('./assets/images/hero.jpg');"
+        class="bg-cover bg-center bg-fixed flex flex-col item-center justify-center h-[calc(100vh-200px)] min-h-[400px]">
+        <!-- We're adding our image as a style. We could embed it directly as a class,
+but since we might work with things like react, this makes more sense in this case. bg-fixed will make the 
+image static when you scroll down the page -->
       </div>
     </header>
   </main>
