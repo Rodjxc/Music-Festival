@@ -4,32 +4,23 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <link href="/Music-Festival/dist/output.css" rel="stylesheet" />
+  <link href="/dist/output.css" rel="stylesheet" />
   <script defer src="./assets/fontawesome/js/solid.min.js"></script>
   <script defer src="./assets/fontawesome/js/fontawesome.min.js"></script>
-  <script>
-    window.onload = () => {
+  <script>window.onload = () => {
       const mobileMenuIcon = document.getElementById("mobile-menu-button");
-      const mobileMenu = document.querySelector(".peer-open");
       mobileMenuIcon.addEventListener("click", () => {
         if (mobileMenuIcon.classList.contains("open")) {
-          mobileMenuIcon.classList.remove("open");
-          mobileMenu.classList.add("hidden");
-        } else {
-          mobileMenuIcon.classList.add("open");
-          mobileMenu.classList.remove("hidden");
-          mobileMenu.classList.add("block");
-        }
-        const ticketsMenuItem = document.getElementById("tickets-menu-item");
-        ticketsMenuItem.addEventListener("click", () => {
-          if (ticketsMenuItem.classList.contains("open")) {
-            ticketsMenuItem.classList.remove("open");
-          } else {
-            ticketsMenuItem.classList.add("open");
-          }
-        })
+          mobileMenuIcon.classList.remove("open")
+        } else { mobileMenuIcon.classList.add("open") }
       });
-    };
+      const ticketsMenuItem = document.getElementById("tickets-menu-item");
+      ticketsMenuItem.addEventListener("click", () => {
+        if (ticketsMenuItem.classList.contains("open")) {
+          ticketsMenuItem.classList.remove("open")
+        } else { ticketsMenuItem.classList.add("open") }
+      });
+    }
   </script>
 
 </head>
@@ -41,71 +32,77 @@
       <nav class="sticky flex top-0 bg-gradient-to-r from-rose-700 to-pink-500">
         <div class="flex items-center p-2 gap-2">
           <img src="./assets/images/logo-inverted.png" width="45" alt="logo">
-          <div class="text-2xl font-bold">Tw: <span class="text-sky-900"> Music Festival</span></div>
+          <div class="text-2xl font-bold">Oslo<span class="text-sky-900"> Music Festival</span></div>
         </div>
         <!--The above div will take the logo and the logo text-->
+        <!-- #########  HAMBURGUER MENU ICON  #######-->
         <div class="block md:hidden ml-auto pr-4 my-auto cursor-pointer">
 
 
-          <!-- #####  HAMBURGUER MENU ICON  ####-->
+
 
 
           <div id="mobile-menu-button" class="group peer">
-            <!--to make an animation with the 3 lines to an X, we add an id that will trigger
+            <!--to make an animation with the 3 lines to an X, we add the class GROUP (to group all 3 lines
+            and an ID of mobile-menu-button with a JS listener that will trigger
             a class when you click. The top line will rotate 45d, the middle one will disspaear
-          and the bottom one will rotate the oposite direction 45d-->
+           and the bottom one will rotate the oposite direction 45d-->
             <div
-              class="top-0 bg-zinc-200 rounded-full w-8 h-1 group-open:rotate-45 transition-all group-open:top-2 relative">
+              class="relative top-0 h-1 w-8 rounded-full bg-zinc-200 transition-all group-open:top-2 group-open:rotate-45">
             </div>
             <!-- for the effect of the X we'll need a listener that will trigger it. Also, we're 
-            grouping the inside of the hamburguer menu into a group, and that group will have a 
-          VARIANT (the -open status) that we'll define with a plugin-->
+             grouping the inside of the hamburguer menu into a group, and that group will have a 
+             VARIANT (the -open status) that we'll define with a plugin-->
+
             <div class="bg-zinc-200 rounded-full w-8 h-1 mt-1 group-open:opacity-0 opacity-100 transition-all"></div>
             <div
               class="top-0 bg-zinc-200 rounded-full w-8 h-1 mt-1 group-open:-rotate-45 transition-all group-open:-top-2 relative">
             </div>
           </div>
 
+
+
           <!-- #########  INSIDE THE HAMBURGER MENU  #######-->
 
-          <div class="absolute bg-gradient-to-r from-rose-700 to-pink-500 peer-open hidden w-full left-0 top-14">
+          <div
+            class="absolute bg-gradient-to-r from-rose-700 to-pink-500 w-full left-0 top-[58px] peer-open:block hidden">
             <div
-              class="p-4 font-bold hover:bg-white/5 hover:text-zinc-200 transition-colors ease-in-out cursor-pointer text-pink-200 items-center justify-center">
+              class="relative flex h-full cursor-pointer items-center justify-center p-4 font-bold text-pink-200 hover:text-zinc-200 hover:bg-white/10">
               <span>Home</span>
             </div>
             <div
-              class="p-4 font-bold hover:bg-white/5 hover:text-zinc-200 transition-colors ease-in-out cursor-pointer text-pink-200 items-center justify-center">
+              class="relative flex h-full cursor-pointer items-center justify-center p-4 font-bold text-pink-200 hover:text-zinc-200 hover:bg-white/10">
               <span>Lineup</span>
             </div>
+
             <div id="tickets-menu-item"
-              class="group font-bold hover:bg-white/5 hover:text-zinc-200 transition-colors ease-in-out cursor-pointer text-pink-200 items-center justify-center">
+              class="group relative h-full cursor-pointer text-pink-200 hover:text-zinc-200 hover:bg-white/10">
               <div class="p-4 text-center font-bold">Tickets</div>
-              <div class="group-hover:block hidden">
+
+              <div class="hidden group-open:block">
                 <div
-                  class="text-center p-4 relative text-pink-200 hover:text-zinc-200 hover:bg-white/2 transition-colors ease-in-out">
-                  <span>Single Day Ticket</span>
+                  class="text-center p-4 relative text-pink-200 hover:text-zinc-200 hover:bg-white/5 transition-colors ease-in-out">
+                  <span>Single Day Tickets</span>
                 </div>
                 <div
-                  class="text-center p-4 relative text-pink-200 hover:text-zinc-200 hover:bg-white/2 transition-colors ease-in-out">
-                  <span>Two Day Ticket</span>
+                  class="text-center p-4 relative text-pink-200 hover:text-zinc-200 hover:bg-white/5 transition-colors ease-in-out">
+                  <span>2 Day tickets</span>
                 </div>
                 <div
-                  class="text-center p-4 relative text-pink-200 hover:text-zinc-200 hover:bg-white/2 transition-colors ease-in-out">
+                  class="text-center p-4 relative text-pink-200 hover:text-zinc-200 hover:bg-white/5 transition-colors ease-in-out">
                   <span>Full Pass</span>
                 </div>
               </div>
             </div>
             <div
-              class="p-4 font-bold hover:bg-white/5 hover:text-zinc-200 transition-colors ease-in-out cursor-pointer text-pink-200 items-center justify-center">
+              class="relative flex h-full cursor-pointer items-center justify-center p-4 font-bold text-pink-200 hover:text-zinc-200 hover:bg-white/10">
               <span>Support</span>
             </div>
           </div>
-
         </div>
-        <!-- Above is the mobile navigation. It will do the opposite as the above md sreens,
-        it'll be block (so visible) but on screens medium and above, it'll hide
-      The hamburguer menu is basically 3 empty divs with a white background with a bit of margin
-    top on two of them-->
+        <!-- Above is the mobile navigation. It will do the opposite as the above md sreens, it'll be block (so visible) but on screens 
+          medium and above, it'll hide by default with the 'hidden' class .The hamburguer menu is basically 3 empty divs with a white
+           background with a bit of margin top on two of them-->
 
 
         <!-- ##### WIDE SCREEN NAVBAR #####-->
@@ -124,28 +121,30 @@
           <div class="menu-item group">
             <span>Tickets</span>
             <div
-              class="group-hover:block hidden absolute top-full whitespace-nowrap right-0 bg-pink-500 rounded-b-md text-right">
+              class="absolute top-full right-0 hidden whitespace-nowrap rounded-b-md bg-pink-500 text-right group-hover:block">
               <div
-                class="p-4 font-bold hover:bg-white/5 hover:text-zinc-200 transition-colors ease-in-out cursor-pointer text-pink-200">
-                <span>Single Day Ticket</span>
+                class="cursor-pointer p-4 font-bold text-pink-200 transition-colors ease-in-out hover:bg-white/5 hover:text-zinc-200">
+                <span>Single day ticket</span>
               </div>
               <div
-                class="p-4 font-bold hover:bg-white/5 hover:text-zinc-200 transition-colors ease-in-out cursor-pointer text-pink-200">
-                <span>Two Day Ticket</span>
+                class="cursor-pointer p-4 font-bold text-pink-200 transition-colors ease-in-out hover:bg-white/5 hover:text-zinc-200">
+                <span>2 day ticket</span>
               </div>
               <div
-                class="p-4 font-bold hover:bg-white/5 hover:text-zinc-200 transition-colors ease-in-out cursor-pointer text-pink-200">
-                <span>Full Pass Ticket</span>
+                class="cursor-pointer p-4 font-bold text-pink-200 transition-colors ease-in-out hover:bg-white/5 hover:text-zinc-200">
+                <span>Full Pass</span>
               </div>
             </div>
           </div>
           <div class="menu-item">
             <span>Support</span>
           </div>
-
-
         </div>
-        <!-- The above div will take the rest of the navbar. For it to take the
+      </nav>
+
+
+
+      <!-- The above div will take the rest of the navbar. For it to take the
         whole space between the end and the logo, we select flex-1. The class menu-item 
       is a component class created by us-->
       </nav>
@@ -153,12 +152,109 @@
       <!-- ###############  HERO SECTION    ################ -->
 
       <div style="background-image: url('./assets/images/hero.jpg');"
-        class="bg-cover bg-center bg-fixed flex flex-col item-center justify-center h-[calc(100vh-200px)] min-h-[400px]">
+        class="bg-cover bg-center bg-fixed flex flex-col items-center justify-center h-[calc(100vh-200px)] min-h-[400px]">
         <!-- We're adding our image as a style. We could embed it directly as a class,
-but since we might work with things like react, this makes more sense in this case. bg-fixed will make the 
-image static when you scroll down the page -->
+         but since we might work with things like react, this makes more sense in this case. bg-fixed will make the 
+         image static when you scroll down the page -->
+        <div class="bg-white/30 py-2 px-4 rounded-xl text-center backdrop-blur-md">
+
+
+          <div class="relative flex flex-col items-center justify-center">
+            <img src="./assets/images/logo.png" width="175" alt="">
+
+            <!-- Animation of soundwaves. We created another pink circle to cover the existing one, and 
+            we'll put the animation on top   -->
+            <div class="flex items-center justify-center mt-[-70px] mb-5">
+              <!-- Above, the container including the whole thing-->
+              <div class="bg-pink-500 w-14 h-14 rounded-full flex items-center justify-center gap-1">
+                <!-- Above, the small pink circle that will cover -->
+                <div class="h-2 w-1 bg-pink-300 animate-wavey"></div>
+                <div class="w-1 h-3 bg-pink-200 rounded-full animate-wavey animation-delay-200"></div>
+                <div class="w-1 h-4 bg-pink-100 rounded-full animate-wavey animation-delay-600"></div>
+                <div class="w-1 h-3 bg-pink-200 rounded-full animate-wavey animation-delay-[150]"></div>
+                <div class="h-2 w-1 bg-pink-300 rounded-full animate-wavey animation-delay-300"></div>
+                <!-- each of the 5 divs above represent on of the 5 bars that will move -->
+              </div>
+            </div>
+          </div>
+          <div class="text-5xl font-bold flex flex-col">
+            Oslo <span class="text-sky-900">Music Festival</span>
+          </div>
+        </div>
+        <div class="font-bold mt-3 text-sm">Keep me updated with news and promotions
+
+        </div>
+        <form class="mt-3 flex gap-2">
+          <input type="email" name="" id:"" placeholder="Email"
+            class="rounded-sm border-white/40 bg-white/30 backdrop-blur-md p-2 font-bold text-sky-900 placeholder-zinc-500 caret-pink-500 outline-pink-500 ">
+
+          <button type="submit"
+            class="cursor-pointer rounded-sm bg-pink-500 py-2 px-4 font-bold transition-colors hover:bg-sky-900 hover:shadow-lg hover:shadow-black/20">Subscribe
+
+          </button>
+        </form>
       </div>
     </header>
+    <!--   #########   HEADLINERS SECTION  ############  -->
+    <div class="max-w-screen-lg mx-auto mt-20">
+      <h2>Headliners</h2>
+      <p>Experience the sonic delight from these made-up artists across 7 days that music fans are calling
+        "one of the many gigs that will happen in Oslo this year"
+      </p>
+      <div class="mt-4 flex w-full gap-4 pb-5 snap-x overflow-x-auto">
+        <div class="min-w-[80%] md:min-w-[40%]">
+          <div style="background-image: url('./assets/images/band1.jpg')"
+            class="h-80 w-full snap-center rounded-xl bg-cover bg-center shadow-md shadow-black/20">
+          </div>
+          <h5 class="mt-2">Corduroy Gary</h5>
+          <h6>1st of July, 9pm - Main Stage</h6>
+        </div>
+        <div class="min-w-[80%] md:min-w-[40%]">
+          <div style="background-image: url('./assets/images/band2.jpg')"
+            class="h-80 w-full snap-center rounded-xl bg-cover bg-center shadow-md shadow-black/20">
+          </div>
+          <h5 class="mt-2">Trumpet Dude</h5>
+          <h6>1st of July, 9pm - NOCCO Stage</h6>
+        </div>
+        <div class="min-w-[80%] md:min-w-[40%]">
+          <div style="background-image: url('./assets/images/band3.jpg')"
+            class="h-80 w-full snap-center rounded-xl bg-cover bg-center shadow-md shadow-black/20">
+          </div>
+          <h5 class="mt-2">The Goldyboys</h5>
+          <h6>1st of July, 11pm - Main Stage</h6>
+        </div>
+        <div class="min-w-[80%] md:min-w-[40%]">
+          <div style="background-image: url('./assets/images/band4.jpg')"
+            class="h-80 w-full snap-center rounded-xl bg-cover bg-center shadow-md shadow-black/20">
+          </div>
+          <h5 class="mt-2">Ankle Axion</h5>
+          <h6>2st of July, 11pm - NOCCO Stage</h6>
+        </div>
+        <div class="min-w-[80%] md:min-w-[40%]">
+          <div style="background-image: url('./assets/images/band5.jpg')"
+            class="h-80 w-full snap-center rounded-xl bg-cover bg-center shadow-md shadow-black/20">
+          </div>
+          <h5 class="mt-2">Karnivault</h5>
+          <h6>3st of July, 10pm - NOCCO Stage</h6>
+        </div>
+        <div class="min-w-[80%] md:min-w-[40%]">
+          <div style="background-image: url('./assets/images/band6.jpg')"
+            class="h-80 w-full snap-center rounded-xl bg-cover bg-center shadow-md shadow-black/20">
+          </div>
+          <h5 class="mt-2">Sammy Soul</h5>
+          <h6>2st of July, 10pm - Main Stage</h6>
+        </div>
+        <div class="min-w-[80%] md:min-w-[40%]">
+          <div style="background-image: url('./assets/images/band7.jpg')"
+            class="h-80 w-full snap-center rounded-xl bg-cover bg-center shadow-md shadow-black/20">
+          </div>
+          <h5 class="mt-2">Tina Timmerson</h5>
+          <h6>3st of July, 11pm - Main Stage</h6>
+        </div>
+
+        <!-- ####    Carousel   ####-->
+      </div>
+    </div>
   </main>
 </body>
 
