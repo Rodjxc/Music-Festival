@@ -2,6 +2,7 @@ const { default: plugin } = require("tailwindcss");
 
 /** @type {import('tailwindcss').Config} */
 module.exports = {
+  dark: "class",
   content: ["./src/**/*.{html,js}"],
   theme: {
     //we're "extending" the things TailwindCSS has with a custom animation
@@ -30,4 +31,8 @@ module.exports = {
   },
 
   //
-  plugins: [require("./plugin/openVariant"), require("./plugin/animationDelay")]};
+  plugins: [
+    require("./plugin/openVariant"),
+    require("./plugin/animationDelay"),
+  ],
+};
