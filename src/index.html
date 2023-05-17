@@ -239,7 +239,7 @@
       </p>
       <!-- The div below includes the carousel, the direction arrows and the 
       description of the artists and times. The main div will have 3 divs: left arrow,
-    carousel itself and right arrow -->
+     carousel itself and right arrow -->
       <div class="flex">
         <div class="text-5xl flex justify-center items-center cursor-pointer relative -top-8 p-2"
           data-explanation="left arrow" id="previous">
@@ -303,10 +303,119 @@
           <i class="fas fa-angle-right"></i>
         </div>
       </div>
+      <!--    ########      TIMEPLAN      ########### -->
+
+      <h2 class="mt-20" data-explanation="Lineup timeline">Lineup</h2>
+      <p>
+        Follow the timetable and stage to ensure you don't miss your favourite artists
+      </p>
+      <div data-explanation="wrapper div for the section"
+        class="rounded-lg relative mt-5 bg-zinc-800 py-4 px-2 text-zinc-200">
+        <div data-explanation="timeline line"
+          class="absolute top-0 left-1/2 w-4 ml-[-8px] h-full rounded-full bg-gradient-to-b from-teal-700 via-cian-900 to-pink-900">
+          <div data-explanation="red dot in the line" class="sticky top-1/2">
+
+            <div data-explanation="actual red dot" class="relative h-4 w-4">
+              <div data-explanation="pulsing effect"
+                class="absolute animate-ping h-4 w-4 rounded-full bg-pink-400 opacity-75">
+              </div>
+              <div data-explanation="actual pin" class="bg-rose-500 rounded-full relative h-4 w-4"></div>
+            </div>
+          </div>
+        </div>
+        <div data-explanation="Items inside the timeline" class="grid grid-cols-2 gap-8">
+          <div>
+            <h4 class="p-2 bg-zinc-900 rounded-lg my-4">1st of July</h4>
+          </div>
+          <div data-explanation="Empty"></div>
+          <div class="text-right">
+            <div class="font-bold">Rapperuntzel</div>
+            <div class="text-zinc-400">6pm - NOCCO Stage</div>
+          </div>
+          <div data-explanation="Empty"></div>
+          <div data-explanation="Empty"></div>
+          <div class="text-left">
+            <div class="font-bold">Fanty Fantastic</div>
+            <div class="text-zinc-400">7pm - Main Stage</div>
+          </div>
+          <div class="text-right">
+            <div class="font-bold">Kristian Kristiansen</div>
+            <div class="text-zinc-400">9pm - Main Stage</div>
+          </div>
+          <div class="text-left">
+            <div class="font-bold">Trumpet Dude</div>
+            <div class="text-zinc-400">9pm - NOCCO Stage</div>
+          </div>
+          <div class="text-right">
+            <div class="font-bold">The Goldyboys</div>
+            <div class="text-zinc-400">11pm - Main Stage</div>
+          </div>
+          <div data-explanation="Empty"></div>
+          <div data-explanation="Empty"></div>
+
+          <div>
+            <h4 class="p-2 bg-zinc-900 rounded-lg my-4">2nd July</h4>
+          </div>
+          <div data-explanation="Empty"></div>
+
+          <div class="text-left">
+            <div class="font-bold">Sammy Soul</div>
+            <div class="text-zinc-400">10pm - Main Stage</div>
+          </div>
+          <div data-explanation="Empty"></div>
+          <div data-explanation="Empty"></div>
+          <div class="text-right">
+            <div class="font-bold">Ankle Axion</div>
+            <div class="text-zinc-400">11pm - NOCCO Stage</div>
+          </div>
+          <div data-explanation="Empty"></div>
+          <div>
+            <h4 class="p-2 bg-zinc-900 rounded-lg my-4">3rd of July</h4>
+          </div>
+          <div data-explanation="Empty"></div>
+          <div data-explanation="Empty"></div>
+          <div>
+            <div class="font-bold">Karnivault</div>
+            <div class="text-zinc-400">10pm - NOCCO Stage</div>
+          </div>
+          <div class="text-right">
+            <div class="font-bold">Tina Timmerson</div>
+            <div class="text-zinc-400">11pm - Main Stage</div>
+          </div>
+          <div data-explanation="Empty"></div>
+
+        </div>
+
+      </div>
+
+      <!--   ###########  TICKETS TABLE    ###########  -->
+
+
+      <h2 class="mt-20">Tickets</h2>
+      <table class="mt-5 table w-full border border-zinc-500 border-collapse">
+        <thead class="text-lg font-bold">
+          <td class="border border-zinc-500 p-3">Tickets</td>
+          <td class="border border-zinc-500 p-3">Price</td>
+        </thead>
+        <tbody>
+          <tr>
+            <td class="border border-zinc-500 py-2 px-3">Single Day Ticket</td>
+            <td class="border border-zinc-500 py-2 px-3">300 NOK</td>
+          </tr>
+          <tr>
+            <td class="border border-zinc-500 py-2 px-3">Two Days Ticket</td>
+            <td class="border border-zinc-500 py-2 px-3">500 NOK</td>
+          </tr>
+          <tr>
+            <td class="border border-zinc-500 py-2 px-3">Full Pass</td>
+            <td class="border border-zinc-500 py-2 px-3">800 NOK</td>
+          </tr>
+        </tbody>
+        <caption class="caption-bottom my-4">Once they're gone, they're gone</captio>
+      </table>
 
     </div>
-
-
+    <footer class="text-zinc-100 flex items-center justify-center pt-28 pb-6">Rod Jimeno - @2023</footer>
   </main>
 </body>
 

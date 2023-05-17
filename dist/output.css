@@ -686,12 +686,20 @@ h6{
   left: 0px;
 }
 
+.left-1\/2{
+  left: 50%;
+}
+
 .right-0{
   right: 0px;
 }
 
 .top-0{
   top: 0px;
+}
+
+.top-1\/2{
+  top: 50%;
 }
 
 .top-24{
@@ -715,6 +723,11 @@ h6{
   margin-right: auto;
 }
 
+.my-4{
+  margin-top: 1rem;
+  margin-bottom: 1rem;
+}
+
 .my-auto{
   margin-top: auto;
   margin-bottom: auto;
@@ -722,6 +735,10 @@ h6{
 
 .mb-5{
   margin-bottom: 1.25rem;
+}
+
+.ml-\[-8px\]{
+  margin-left: -8px;
 }
 
 .ml-auto{
@@ -748,6 +765,10 @@ h6{
   margin-top: 1rem;
 }
 
+.mt-5{
+  margin-top: 1.25rem;
+}
+
 .mt-\[-70px\]{
   margin-top: -70px;
 }
@@ -766,6 +787,10 @@ h6{
 
 .table{
   display: table;
+}
+
+.grid{
+  display: grid;
 }
 
 .hidden{
@@ -820,6 +845,10 @@ h6{
   width: 3.5rem;
 }
 
+.w-4{
+  width: 1rem;
+}
+
 .w-8{
   width: 2rem;
 }
@@ -846,6 +875,14 @@ h6{
 
 .grow{
   flex-grow: 1;
+}
+
+.caption-bottom{
+  caption-side: bottom;
+}
+
+.border-collapse{
+  border-collapse: collapse;
 }
 
 .rotate-180{
@@ -888,6 +925,10 @@ h6{
   scroll-snap-align: center;
 }
 
+.grid-cols-2{
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+}
+
 .flex-col{
   flex-direction: column;
 }
@@ -916,6 +957,10 @@ h6{
   gap: 1rem;
 }
 
+.gap-8{
+  gap: 2rem;
+}
+
 .overflow-x-auto{
   overflow-x: auto;
 }
@@ -930,6 +975,10 @@ h6{
 
 .rounded-full{
   border-radius: 9999px;
+}
+
+.rounded-lg{
+  border-radius: 0.5rem;
 }
 
 .rounded-sm{
@@ -962,6 +1011,11 @@ h6{
   border-color: rgb(255 255 255 / 0.4);
 }
 
+.border-zinc-500{
+  --tw-border-opacity: 1;
+  border-color: rgb(113 113 122 / var(--tw-border-opacity));
+}
+
 .bg-pink-100{
   --tw-bg-opacity: 1;
   background-color: rgb(252 231 243 / var(--tw-bg-opacity));
@@ -977,9 +1031,19 @@ h6{
   background-color: rgb(249 168 212 / var(--tw-bg-opacity));
 }
 
+.bg-pink-400{
+  --tw-bg-opacity: 1;
+  background-color: rgb(244 114 182 / var(--tw-bg-opacity));
+}
+
 .bg-pink-500{
   --tw-bg-opacity: 1;
   background-color: rgb(236 72 153 / var(--tw-bg-opacity));
+}
+
+.bg-rose-500{
+  --tw-bg-opacity: 1;
+  background-color: rgb(244 63 94 / var(--tw-bg-opacity));
 }
 
 .bg-white\/30{
@@ -991,9 +1055,18 @@ h6{
   background-color: rgb(228 228 231 / var(--tw-bg-opacity));
 }
 
+.bg-zinc-800{
+  --tw-bg-opacity: 1;
+  background-color: rgb(39 39 42 / var(--tw-bg-opacity));
+}
+
 .bg-zinc-900{
   --tw-bg-opacity: 1;
   background-color: rgb(24 24 27 / var(--tw-bg-opacity));
+}
+
+.bg-gradient-to-b{
+  background-image: linear-gradient(to bottom, var(--tw-gradient-stops));
 }
 
 .bg-gradient-to-r{
@@ -1006,8 +1079,18 @@ h6{
   --tw-gradient-stops: var(--tw-gradient-from), var(--tw-gradient-to);
 }
 
+.from-teal-700{
+  --tw-gradient-from: #0f766e var(--tw-gradient-from-position);
+  --tw-gradient-to: rgb(15 118 110 / 0) var(--tw-gradient-to-position);
+  --tw-gradient-stops: var(--tw-gradient-from), var(--tw-gradient-to);
+}
+
 .to-pink-500{
   --tw-gradient-to: #ec4899 var(--tw-gradient-to-position);
+}
+
+.to-pink-900{
+  --tw-gradient-to: #831843 var(--tw-gradient-to-position);
 }
 
 .bg-cover{
@@ -1026,8 +1109,22 @@ h6{
   padding: 0.5rem;
 }
 
+.p-3{
+  padding: 0.75rem;
+}
+
 .p-4{
   padding: 1rem;
+}
+
+.px-2{
+  padding-left: 0.5rem;
+  padding-right: 0.5rem;
+}
+
+.px-3{
+  padding-left: 0.75rem;
+  padding-right: 0.75rem;
 }
 
 .px-4{
@@ -1040,12 +1137,33 @@ h6{
   padding-bottom: 0.5rem;
 }
 
+.py-4{
+  padding-top: 1rem;
+  padding-bottom: 1rem;
+}
+
 .pb-5{
   padding-bottom: 1.25rem;
 }
 
+.pb-8{
+  padding-bottom: 2rem;
+}
+
 .pr-4{
   padding-right: 1rem;
+}
+
+.pt-28{
+  padding-top: 7rem;
+}
+
+.pb-6{
+  padding-bottom: 1.5rem;
+}
+
+.text-left{
+  text-align: left;
 }
 
 .text-center{
@@ -1071,6 +1189,11 @@ h6{
   line-height: 1;
 }
 
+.text-lg{
+  font-size: 1.125rem;
+  line-height: 1.75rem;
+}
+
 .text-sm{
   font-size: 0.875rem;
   line-height: 1.25rem;
@@ -1094,9 +1217,19 @@ h6{
   color: rgb(12 74 110 / var(--tw-text-opacity));
 }
 
+.text-zinc-100{
+  --tw-text-opacity: 1;
+  color: rgb(244 244 245 / var(--tw-text-opacity));
+}
+
 .text-zinc-200{
   --tw-text-opacity: 1;
   color: rgb(228 228 231 / var(--tw-text-opacity));
+}
+
+.text-zinc-400{
+  --tw-text-opacity: 1;
+  color: rgb(161 161 170 / var(--tw-text-opacity));
 }
 
 .text-zinc-900{
@@ -1124,6 +1257,10 @@ h6{
 
 .opacity-100{
   opacity: 1;
+}
+
+.opacity-75{
+  opacity: 0.75;
 }
 
 .shadow-md{
@@ -1187,6 +1324,10 @@ h6{
 
 .animation-delay-\[150\]{
   animation-delay: 150;
+}
+
+.caption-bottom{
+  .caption-side: bottom;
 }
 
 /*In the base layer we should only target html*/

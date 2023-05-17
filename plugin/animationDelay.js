@@ -1,8 +1,13 @@
+//We created the animationDelay for the animation of the X in the
+//hamburger menu when clicking on it
+
 const plugin = require("tailwindcss/plugin");
 
 const animationDelay = plugin(
   function ({ matchUtilities, theme }) {
     matchUtilities(
+      //the matchUtilities let's us create dynamic classes
+
       {
         "animation-delay": (value) => {
           return {
