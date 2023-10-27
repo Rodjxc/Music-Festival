@@ -1,5 +1,6 @@
 import { Carousel } from "react-responsive-carousel";
 import "react-responsive-carousel/lib/styles/carousel.min.css"; // Import the carousel styles
+import "./carousel.css"
 
 export const Headliners = () => {
   return (
@@ -13,21 +14,21 @@ export const Headliners = () => {
         Oslo this year.
       </p>
 
-      <div className="flex">
-        <Carousel
+      <div className="flex carousel">
+              <Carousel
           showArrows={true}
           showStatus={false}
           showIndicators={false}
-          showThumbs={false}
+          showThumbs={true}
           emulateTouch={true} // Enable touch emulation
           infiniteLoop={true} // Enable infinite loop for the carousel
           centerMode={true} // Enable center mode
-          centerSlidePercentage={73} // Adjust the percentage for center mode
+          centerSlidePercentage={65} // Adjust the percentage for center mode
           autoPlay={true}
         >
           <div className="carousel-item mx-4">
             <div className="min-w-[80%] md:min-w-[40%]">
-              <div className="h-80 w-full snap-center rounded-xl bg-cover bg-center shadow-md shadow-black/20 bg-[url('img/band1.jpg')]"></div>
+              <div className="h-80 w-full snap-center rounded-xl bg-cover bg-center shadow-md shadow-black/20 bg-[url('/img/band1.jpg')]"></div>
               <h5 className="mt-2">Kristian Kristiansen</h5>
               <h6>1st of July, 9pm - Main Stage</h6>
             </div>
@@ -35,7 +36,7 @@ export const Headliners = () => {
 
           <div className="carousel-item mx-4">
             <div className="min-w-[80%] md:min-w-[40%]">
-              <div className="h-80 w-full snap-center rounded-xl bg-cover bg-center shadow-md shadow-black/20 bg-[url('img/band2.jpg')]"></div>
+              <div className="h-80 w-full snap-center rounded-xl bg-cover bg-center shadow-md shadow-black/20 bg-[url('/img/band2.jpg')]"></div>
               <h5 className="mt-2">Trumpet Dude</h5>
               <h6>1st of July, 9pm - NOCCO Stage</h6>
             </div>

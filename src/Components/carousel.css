@@ -1,0 +1,5 @@
+@media (max-width: 1090px) {
+    .carousel {
+      max-width: 80%; /* Adjust the desired width */
+    }
+  }
