@@ -23,7 +23,7 @@ export const Headliners = () => {
           infiniteLoop={true} // Enable infinite loop for the carousel
           centerMode={true} // Enable center mode
           centerSlidePercentage={73} // Adjust the percentage for center mode
-          autoPlay={2500}
+          autoPlay={true}
         >
           <div className="carousel-item mx-4">
             <div className="min-w-[80%] md:min-w-[40%]">
