@@ -6,20 +6,18 @@ import { Tickets } from "./Components/Tickets";
 import { Footer } from "./Components/Footer";
 
 export default function App() {
-  return (
-    <>
-      <main className="bg-zinc-200 dark:bg-zinc-900">
-        <header className="text-zinc-200">
-          <Navbar />
-          <Hero />
-        </header>
-        <Headliners />
+	return (
+		<main className="bg-zinc-200 dark:bg-zinc-900">
+			<header className="text-zinc-200">
+				<Navbar />
+				<Hero />
+			</header>
+			<Headliners />
 
-        <Timeplan />
+			<Timeplan />
 
-        <Tickets />
-        <Footer />
-      </main>
-    </>
-  );
+			<Tickets />
+			<Footer />
+		</main>
+	);
 }
